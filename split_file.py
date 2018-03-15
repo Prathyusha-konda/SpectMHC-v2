@@ -1,4 +1,8 @@
+import csv, sys, math
+fname = sys.argv[1]
+num = sys.argv[2]
 
+split_files("split")
 
 def split_files(split):
 	def chunks(l, n):
@@ -10,8 +14,8 @@ def split_files(split):
 			temp = temp+i+">"
 		temp = temp[:-1]
 		return temp
-	filename = raw_input("\nEnter file name: ")
-	number = int(raw_input("\nHow many number of sequences do you want per file? : "))
+	filename = fname
+	number = int(num)
 	split_list=[]
 
 
