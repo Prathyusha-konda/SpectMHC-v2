@@ -4,6 +4,7 @@ path = sys.argv[1]
 ver = sys.argv[2]
 ifile = sys.argv[3]
 mhc = sys.argv[4]
+len = sys.argv[5]
 
 executemhc(ver, ifile)
 
@@ -17,10 +18,10 @@ def executemhc(version, list_of_files):
 	
 	path = path
 	
-	num = raw_input("\nPlease enter which length peptides you want to predict; if multiple lengths, seperate numbers with space 8 9 10 11: ")
-	input_list = num.split()
-	input_list = [int(a) for a in input_list]
-
+	#num = raw_input("\nPlease enter which length peptides you want to predict; if multiple lengths, seperate numbers with space 8 9 10 11: ")
+	#input_list = num.split()
+	#input_list = [int(a) for a in input_list]
+	input_list=len
 
 	allele=mhc
 
