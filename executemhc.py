@@ -1,3 +1,11 @@
+import csv, sys, math
+
+path = sys.argv[1]
+ver = sys.argv[2]
+ifile = sys.argv[3]
+mhc = sys.argv[4]
+
+executemhc(ver, ifile)
 
 
 def executemhc(version, list_of_files):
@@ -7,14 +15,14 @@ def executemhc(version, list_of_files):
 	import glob, os
 	import threading
 	
-	path = raw_input("\nPlease enter the path to netMHC folder, ex: /home/prathyusha/NetMHC_4.0_for_Linux/netMHC-4.0: ")
+	path = path
 	
 	num = raw_input("\nPlease enter which length peptides you want to predict; if multiple lengths, seperate numbers with space 8 9 10 11: ")
 	input_list = num.split()
 	input_list = [int(a) for a in input_list]
 
 
-	allele=raw_input("\nPlease enter the allele you want to predict; ex- H-2-Kb or HLA-A0301: ")
+	allele=mhc
 
 	out_list = []
 	for i in input_list:	
