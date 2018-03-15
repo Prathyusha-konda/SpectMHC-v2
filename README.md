@@ -50,7 +50,6 @@ Output
 -----
 - A targeted database of MHC ligands in fasta format to be used for mass spectrometry searches.
 
-Usage 
+For queries, contact:
 ------
-For queries, contact: 
 ###prathyusha.konda@dal.ca
