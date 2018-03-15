@@ -5,17 +5,17 @@
 #-s -> split file
 #-h -> help
 
-raw_output='no'
-fasta_output='no'
-split_file='no'
+raw_output=0
+fasta_output=0
+split_file=0
 
 while getopts ":rfhs:" flag; do
 case "$flag" in
-    r) raw_output='yes'
+    r) raw_output=1
        ;;
-	f) fasta_output='yes'
+	f) fasta_output=1
 	   ;;
-	s) split_file='yes'
+	s) split_file=1
 	   ;;
 	h) echo ""
 	   echo "Usage: bash ./$0 [-r] [-f] [-s] <netMHC folder> <input fasta> <MHC version> <binding Rank cutoff> <allele> <number_of_split_files>"
@@ -76,6 +76,19 @@ if [ split_file == 1 ]; then
 	
 else 
 	echo "Skipping split files"
+	split_list=$files
 fi
+
+#execute netmhc
+outfile_list=$(python executemhc.py $path $version $split_list $allele)
+
+#output as fasta
+if [ fasta_output == 1 ]; then
+	python tofasta.py $version $outfile_list $cut_off
+	
+else 
+	echo "Not generating fasta output"
+fi
+
 
 
