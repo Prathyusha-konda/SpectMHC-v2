@@ -5,7 +5,9 @@ This is a set of scripts that together predict MHC ligands and output a fasta fi
 
 This is second version of SpectMHC software (version 1: https://github.com/Prathyusha-konda/SpectMHC)
 
-Please cite: MHC-I Ligand Discovery Using Targeted Database Searches of Mass Spectrometry Data: Implications for T-Cell Immunotherapies (https://pubs.acs.org/doi/abs/10.1021/acs.jproteome.6b00971)
+Please cite 
+------
+MHC-I Ligand Discovery Using Targeted Database Searches of Mass Spectrometry Data: Implications for T-Cell Immunotherapies (https://pubs.acs.org/doi/abs/10.1021/acs.jproteome.6b00971)
 
 Usage 
 ------
@@ -46,5 +48,9 @@ Installation instructions and dependencies
 
 Output
 -----
-
 - A targeted database of MHC ligands in fasta format to be used for mass spectrometry searches.
+
+Usage 
+------
+For queries, contact: 
+###prathyusha.konda@dal.ca
