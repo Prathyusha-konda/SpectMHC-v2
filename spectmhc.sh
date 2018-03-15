@@ -53,6 +53,7 @@ version=$2
 files=$3
 cut_off=$4
 allele=$5
+number=$6
 
 if [ $version == "3.4" ]; then
 	echo "Using NetMHC version 3.4"
@@ -70,16 +71,11 @@ fi
 
 #split files
 
-if [ $to_remove == 1 ]; then
-	python split_file.py $files $removal_file
-	mv ${name}_odd_genome_sr.bedGraph ${name}_odd_genome_s.bedGraph
-	python $norm_program ${name}_odd_genome_s.bedGraph $sizes ${name}_odd_genome_sr_norm.bedGraph
-	python $remove_program ${name}_even_genome_s.bedGraph $removal_file ${name}_even_genome_sr.bedGraph
-	mv ${name}_even_genome_sr.bedGraph ${name}_even_genome_s.bedGraph
-	python $norm_program ${name}_even_genome_s.bedGraph $sizes ${name}_even_genome_sr_norm.bedGraph
-	python $norm_program ${name}_input_genome_s.bedGraph $sizes ${name}_input_genome_sr_norm.bedGraph  # no need to remove
+if [ split_file == 1 ]; then
+	split_list=$(python split_file.py $files $number)
+	
 else 
-	python $norm_program ${name}_odd_genome_s.bedGraph $sizes ${name}_odd_genome_sr_norm.bedGraph
-	python $norm_program ${name}_even_genome_s.bedGraph $sizes ${name}_even_genome_sr_norm.bedGraph
-	python $norm_program ${name}_input_genome_s.bedGraph $sizes ${name}_input_genome_sr_norm.bedGraph
+	echo "Skipping split files"
 fi
+
+
