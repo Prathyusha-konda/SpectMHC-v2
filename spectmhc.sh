@@ -16,6 +16,8 @@ case "$flag" in
 	s) split_file=1
 	   ;;
 	h) echo ""
+	   echo "This is a set of scripts that together predict MHC ligands and output a fasta file to be used for downstream mass spectrometry based searches."
+	   echo "Please cite this article: MHC-I Ligand Discovery Using Targeted Database Searches of Mass Spectrometry Data: Implications for T-Cell Immunotherapies"
 	   echo "Usage: bash ./$0 [-r] [-s] <netMHC folder> <input fasta> <MHC version> <binding Rank cutoff> <allele> <number_of_split_files>"
 	   echo ""
      	   echo "    -h -> help"
