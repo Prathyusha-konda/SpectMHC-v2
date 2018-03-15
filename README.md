@@ -11,7 +11,7 @@ Usage
 ------
 `bash ./spectmhc.sh [-r] [-s] <netMHC folder> <MHC version> <input fasta> <binding cutoff> <allele> <number_of_split_files>`
 
-Example: `bash ./spectmhc.sh [-r] [-s] /home/prathyusha/NetMHC_4.0_for_Linux/netMHC-4.0 4.0 human_proteins.fasta 2 HLA-A0301 10`
+Example: `bash ./spectmhc.sh -s /home/prathyusha/NetMHC_4.0_for_Linux/netMHC-4.0 4.0 human_proteins.fasta 2 HLA-A0301 10`
 
 ### Required arguments:
 
