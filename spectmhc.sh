@@ -6,23 +6,21 @@
 #-h -> help
 
 raw_output=0
-fasta_output=0
+#fasta_output=1
 split_file=0
 
 while getopts ":rfhs:" flag; do
 case "$flag" in
     r) raw_output=1
        ;;
-	f) fasta_output=1
-	   ;;
 	s) split_file=1
 	   ;;
 	h) echo ""
-	   echo "Usage: bash ./$0 [-r] [-f] [-s] <netMHC folder> <input fasta> <MHC version> <binding Rank cutoff> <allele> <number_of_split_files>"
+	   echo "Usage: bash ./$0 [-r] [-s] <netMHC folder> <input fasta> <MHC version> <binding Rank cutoff> <allele> <number_of_split_files>"
 	   echo ""
      	   echo "    -h -> help"
 	   echo "    -r -> save raw netmhc output"
-	   echo "    -f -> final in fasta format"
+	   #echo "    -f -> final in fasta format"
 	   echo "    -s -> split file"
 	   echo "    netMHC folder -> path to NetMHC folder, ex: "
      	   echo "    MHC version -> input the version of netMHC 3.4/4.0/pan"
@@ -44,7 +42,7 @@ shift $((OPTIND-1))
 
 # parameters
 if [ "$#" -ne 5 ]; then
-  echo "bash ./$0 [-r] [-f] [-s] <netMHC folder> <MHC version> <input fasta> <binding Rank cutoff> <allele> <number_of_split_files>"
+  echo "bash ./$0 [-r] [-s] <netMHC folder> <MHC version> <input fasta> <binding Rank cutoff> <allele> <number_of_split_files>"
   exit 1
 fi
 
@@ -83,12 +81,10 @@ fi
 outfile_list=$(python executemhc.py $path $version $split_list $allele)
 
 #output as fasta
-if [ fasta_output == 1 ]; then
-	python tofasta.py $version $outfile_list $cut_off
-	
-else 
-	echo "Not generating fasta output"
-fi
+python tofasta.py $version $outfile_list $cut_off
+echo "output fasta generated"
+
+
 
 
 
