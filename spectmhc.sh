@@ -69,6 +69,8 @@ else
 	exit 1
 fi
 
+length=$(python input_length.py)
+
 #split files
 
 if [ split_file == 1 ]; then
