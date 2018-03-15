@@ -52,4 +52,4 @@ Output
 
 For queries, contact:
 ------
-###prathyusha.konda@dal.ca
+prathyusha.konda@dal.ca
