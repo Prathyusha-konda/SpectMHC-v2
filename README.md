@@ -28,7 +28,9 @@ number_of_split_files | only works if -s is selected. enter a numeric value, suc
                               
 ### Optional arguments:
 -h -> help
+
 -r -> save raw netmhc output
+
 -s -> split file
 
 Installation instructions and dependencies
