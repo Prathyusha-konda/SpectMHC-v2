@@ -78,13 +78,22 @@ else
 fi
 
 #execute netmhc
-outfile_list=$(python executemhc.py $path $version $split_list $allele)
+raw_list=$(python executemhc.py $path $version $split_list $allele)
 
 #output as fasta
-python tofasta.py $version $outfile_list $cut_off
+python tofasta.py $version $raw_list $cut_off
 echo "output fasta generated"
 
+#raw netmhc output
+if [ raw_output == 0 ]; then
+	python remove_raw.py $split_list
+	python remove_raw.py $raw_list
+	
+else 
+	python remove_raw.py $split_list
+fi
 
 
-
+#done
+echo "The execution is complete. Your fasta is now available"
 
