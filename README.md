@@ -22,8 +22,7 @@ MHC version   | input the version of netMHC 3.4/4.0/pan
 input fasta   | input protein data in fasta format
 binding cutoff| cutoff to be used (rank for netmhc 4.0/pan, binding affinity for 3.4)
 allele        | MHC allele to predict
-number_of_split_files | only works if -s is selected. enter a numeric value,\
-	   	                        such that every split file has between 1000-2000 sequences
+number_of_split_files | only works if -s is selected. enter a numeric value, such that every split file has between 1000-2000 sequences
                               
 ### Optional arguments:
 -h -> help
