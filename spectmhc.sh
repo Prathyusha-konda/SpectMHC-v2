@@ -82,7 +82,7 @@ else
 fi
 
 #execute netmhc
-raw_list=$(python executemhc.py $path $version $split_list $allele)
+raw_list=$(python executemhc.py $path $version $split_list $allele $length)
 
 #output as fasta
 python tofasta.py $version $raw_list $cut_off
