@@ -30,7 +30,7 @@ case "$flag" in
      	   echo "    binding Rank cutoff -> cutoff to be used, ex: 2"
      	   echo "    allele -> allele to predict, ex: H2-Kb"
 	   echo "    number_of_split_files -> only works if -s is selected. enter a numeric value,\
-	   	     such that every split file has between 1000-2000 sequences"
+	   	                        such that every split file has between 1000-2000 sequences"
 	   echo ""
 	   exit 1
 	    ;;
