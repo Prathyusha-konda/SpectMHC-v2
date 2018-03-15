@@ -31,7 +31,7 @@ number_of_split_files | only works if -s is selected. enter a numeric value, suc
 
 -r -> save raw netmhc output
 
--s -> split file
+-s -> split input fasta file
 
 Installation instructions and dependencies
 --------------
