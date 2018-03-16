@@ -11,7 +11,7 @@ MHC-I Ligand Discovery Using Targeted Database Searches of Mass Spectrometry Dat
 
 Usage 
 ------
-`bash ./spectmhc.sh [-r] [-s] <NetMHC folder> <MHC version> <input fasta> <binding cutoff> <allele> <number_of_split_files>`
+`bash ./spectmhc.sh [-r] [-s] <NetMHC folder> <MHC version> <input fasta> <binding cutoff> <allele> <length_of_peptide> <number_of_split_files>`
 
 Example: `bash ./spectmhc.sh -s /home/prathyusha/NetMHC_4.0_for_Linux/netMHC-4.0 4.0 human_proteins.fasta 2 HLA-A0301 10`
 
@@ -24,6 +24,7 @@ MHC version   | input the version of netMHC 3.4/4.0/pan
 input fasta   | input protein data in fasta format
 binding cutoff| cutoff to be used (rank for netmhc 4.0/pan, binding affinity for 3.4)
 allele        | MHC allele to predict
+length_of_peptide     | Length of peptides to predict, if multiple, please seperate by ','. Ex: 8 or 8,9,10
 number_of_split_files | only works if -s is selected. enter a numeric value, such that every split file has between 1000-2000 sequences. Insert 0 if not using this.
                               
 ### Optional arguments:
