@@ -11,7 +11,7 @@ MHC-I Ligand Discovery Using Targeted Database Searches of Mass Spectrometry Dat
 
 Usage 
 ------
-`bash ./spectmhc.sh [-r] [-s] <NetMHC folder> <MHC version> <input fasta> <binding cutoff> <allele> <length_of_peptide> <number_of_split_files>`
+`bash ./spectmhc.sh [-r] [-s] <NetMHC folder> <MHC version> <input fasta> <binding cutoff> <allele> <length of peptide> <number of split files>`
 
 Example: `bash ./spectmhc.sh -s /home/prathyusha/NetMHC_4.0_for_Linux/netMHC-4.0 4.0 human_proteins.fasta 2 HLA-A0301 10`
 
